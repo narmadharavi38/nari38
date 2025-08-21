@@ -1,0 +1,12 @@
+name: Hello World Workflow   # Name of the workflow
+
+on:                          # When to run
+  push:                      # Trigger on push to repo
+    branches: [ main ]       # Only on main branch
+
+jobs:                        # Jobs section
+  say-hello:
+    runs-on: ubuntu-latest   # Runner (Linux machine)
+    steps:
+      - name: Print message
+        run: echo "Hello, World!"
